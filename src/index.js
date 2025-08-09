@@ -106,7 +106,7 @@ async function tick() {
       alt_ft
     });
 
-    await sendDisplayPayload(payload);
+    // await sendDisplayPayload(payload);
 
     // Prepare/ensure a cache row exists for this ident (for when we add AeroAPI later)
     if (ident && !meta && !missFresh) {
