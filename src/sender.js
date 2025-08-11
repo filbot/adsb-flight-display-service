@@ -1,7 +1,6 @@
 import { CONFIG } from './config.js';
 
 export async function sendDisplayPayload(payload) {
-  // Placeholder PUT target — configurable via DISPLAY_ENDPOINT
   const url = CONFIG.displayEndpoint;
 
   const res = await fetch(url, {
