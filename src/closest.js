@@ -36,3 +36,15 @@ export function pickClosest(aircraftArray, receiver, opts = {}) {
   }
   return best;
 }
+
+export function normalizeIdent(ac) {
+  // Prefer flight ident; fall back to hex
+  const raw = (ac.flight || '').trim();
+  return raw.length ? raw : null;
+}
+
+export function toFeet(alt_baro) {
+  // alt_baro is already feet in dump1090-fa; keep function for clarity/future-proof
+  if (typeof alt_baro === 'number') return alt_baro;
+  return null;
+}
